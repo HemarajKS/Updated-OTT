@@ -24,11 +24,11 @@ const BannerCard = ({ item }: any) => {
         unoptimized
       />
       <div className="absolute inset-0 bg-right-to-left"></div>
-      <div className="absolute inset-0 right-[50%] flex flex-col  justify-center items-center gap-[12px]">
-        <div className="text-white text-6xl font-600  text-clip line-clamp-1 pl-[40px] opacity-80">
+      <div className="absolute inset-0 right-[50%] flex flex-col  justify-center items-center gap-[12px] max-md:gap-0 ">
+        <div className="text-white text-6xl font-600  text-clip line-clamp-1 pl-[40px] opacity-80 max-md:text-4xl max-sm:text-xl max-sm:pl-[30px]">
           {item.name}
         </div>
-        <div className="text-white text-2xl text-clip line-clamp-1 pl-[40px] opacity-80 font-thin">
+        <div className="text-white text-2xl text-clip line-clamp-1 pl-[40px] opacity-80 font-thin max-md:text-sm  max-sm:text-xs max-sm:pl-[30px]">
           {item.genre}
         </div>
         <Link
@@ -38,11 +38,12 @@ const BannerCard = ({ item }: any) => {
               TVSeries: `/tv-shows/${item.id}`,
             }[item.type as keyof { Movie: string; TVSeries: string }] || "/"
           }
+          className="pl-[40px] max-sm:pl-[32px]"
         >
           <Image
             src={PlayIcon}
             alt="Play"
-            className="h-[100px] cursor-pointer w-fit hover:scale-110 ease-in transition-all"
+            className="h-[100px] cursor-pointer w-fit hover:scale-110 ease-in transition-all max-md:h-[72px] max-sm:h-[42px]"
           />
         </Link>
       </div>
