@@ -35,6 +35,8 @@ const config: Config = {
           "linear-gradient(90deg, rgba(23, 32, 63, 0.8) 0%, rgba(18, 23, 47, 0.5) 59.5%, rgba(17, 25, 56, 0.9) 100%), linear-gradient(0.04deg, rgba(0, 0, 0, 0) 0.04%, rgba(0, 0, 0, 0.5) 26.74%, #262626 92.11%)",
         "auth-gradient-mobile":
           "linear-gradient(90deg, rgb(23 32 63 / 81%) 0%, rgb(18 23 47 / 88%) 91%, rgba(17, 25, 56, 0.9) 100%), linear-gradient(0.04deg, #000000 0.04%, rgb(0 0 0 / 28%) 23.54%, #262626 92.11%)",
+        "right-to-left":
+          "linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%);",
       },
       height: {
         // @ts-ignore
