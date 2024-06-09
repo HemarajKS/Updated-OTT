@@ -41,12 +41,8 @@ export interface Content {
   target: Target;
 }
 
-export interface Data {
-  contents: Content[];
-}
-
 export interface RailsProps {
-  data: Data;
+  data: Content[];
   title: string;
 }
 

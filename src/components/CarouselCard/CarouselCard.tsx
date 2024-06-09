@@ -19,7 +19,7 @@ const CarouselCard = ({ actualData }: any) => {
         {
           Movie: `/movies/${jawSummary.id}`,
           TVSeries: `/tv-shows/${jawSummary.id}`,
-        }[jawSummary.type] || "/"
+        }[jawSummary.type as keyof { Movie: string; TVSeries: string }] || "/"
       }
       className={` bg-dark-blue backdrop-filter backdrop-blur-md bg-cover bg-center border border-white border-opacity-25 rounded-lg p-6 shadow-lg flex flex-col items-center justify-center text-center  transition-all
        ${isHovered && "scale-110 max-h-[450px]"}
