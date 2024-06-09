@@ -8,7 +8,7 @@ const Rails = ({ data, title }: RailsProps) => {
   return (
     <div className=" flex flex-col gap-[20px] carousel-custom  relative p-[40px]">
       <Title title={title || strings.movies} />
-      <CarouselItems movieData={data.contents} />
+      <CarouselItems movieData={data} />
     </div>
   );
 };

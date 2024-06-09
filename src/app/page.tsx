@@ -13,42 +13,43 @@ import getComponent from "@/services/PackageSelector";
 // };
 
 const Home = () => {
-  // const [homeData, setHomeData] = useState([]);
-  // const logger = new ErrorLogger();
+  const [homeData, setHomeData] = useState([]);
+  const logger = new ErrorLogger();
 
-  // const fetchHomeData = async () => {
-  //   try {
-  //     const data = await request(URL?.GET_Home_Data, constants.GET);
-  //     setHomeData(data?.curation?.packages);
-  //   } catch (error: any) {
-  //     logger.logError(
-  //       "Menu",
-  //       error?.message as string,
-  //       new Date().toISOString()
-  //     );
-  //   }
-  // };
+  const fetchHomeData = async () => {
+    try {
+      const data = await request(URL?.GET_Home_Data, constants.GET);
 
-  // useEffect(() => {
-  //   fetchHomeData();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+      setHomeData(data?.data && data?.data[0]?.packages);
+    } catch (error: any) {
+      logger.logError(
+        "Menu",
+        error?.message as string,
+        new Date().toISOString()
+      );
+    }
+  };
 
-  // {
-  //   homeData &&
-  //     homeData?.length > 0 &&
-  //     homeData?.map((content: any, i: number) => {
-  //       const Component = getComponent(content.packageType);
+  useEffect(() => {
+    fetchHomeData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  //       return (
-  //         <div key={i}>
-  //           <Component data={content.items} title={content.title} />
-  //         </div>
-  //       );
-  //     });
-  // }
+  return (
+    <main className="h-full">
+      {homeData &&
+        homeData?.length > 0 &&
+        homeData?.map((content: any, i: number) => {
+          const Component = getComponent(content.packageType);
 
-  return <main className="h-full"></main>;
+          return (
+            <div key={i}>
+              <Component data={content.contents} title={content.title} />
+            </div>
+          );
+        })}
+    </main>
+  );
 };
 
 export default Home;

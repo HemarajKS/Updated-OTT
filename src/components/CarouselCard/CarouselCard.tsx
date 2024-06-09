@@ -9,11 +9,12 @@ const CarouselCard = ({ actualData }: any) => {
 
   const [error, setError] = useState(false);
 
-  const src = jawSummary.image.url;
+  const src = jawSummary?.poster || "";
 
   return (
     <Link
-      href={`/${jawSummary.target.path}`}
+      // href={`/${jawSummary.target.path}`}
+      href={"/"}
       className={` bg-dark-blue backdrop-filter backdrop-blur-md bg-cover bg-center border border-white border-opacity-25 rounded-lg p-6 shadow-lg flex flex-col items-center justify-center text-center  transition-all
        ${isHovered && "scale-110 max-h-[450px]"}
       `}
@@ -30,7 +31,7 @@ const CarouselCard = ({ actualData }: any) => {
                 ? "https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?w=740&t=st=1714637808~exp=1714638408~hmac=565aff2bd3609247db95a239bf7f4b2530fe714e77b8c8854fb2ea1199facc20"
                 : src
             }
-            alt={jawSummary.title}
+            alt={jawSummary.name}
             loader={() => src}
             width={500}
             height={300}
@@ -42,7 +43,7 @@ const CarouselCard = ({ actualData }: any) => {
         {isHovered && (
           <div className="transition-opacity duration-300 ">
             <h1 className="text-white uppercase text-3xl font-semibold mt-4 line-clamp-2">
-              {jawSummary.title}
+              {jawSummary.name}
             </h1>
             <p className="text-white text-base mt-4 line-clamp-2">
               {jawSummary.description}

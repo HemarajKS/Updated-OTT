@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={`bg-black`}>
         <Providers>
           <Header />
-          {/* {children} */}
+          {children}
           <FooterBlock />
         </Providers>
       </body>
