@@ -16,13 +16,10 @@ const TvShows = () => {
     limit: number
   ): Promise<{ responseData: any[]; totalPages: number }> => {
     try {
-      const response = await request(
-        `${URL?.GET_ALL_TV_SHOWS}?skip=${skip}&limit=${limit}`,
-        constants.GET
-      );
+      const response = await request(`${URL?.GET_ALL_TV_SHOWS}`, constants.GET);
 
       return {
-        responseData: response?.curation?.packages,
+        responseData: response?.data[0]?.packages,
         totalPages: Math.ceil(
           response?.pagination?.totalItems / constants.API_DATA_LIMIT - 1
         ),
@@ -46,18 +43,14 @@ const TvShows = () => {
   );
 };
 
-const ItemRenderer: React.FC<{ item?: any }> = ({ item }) => (
-  <div key={item._id}>
-    {item?.items?.contents?.map((content: any, i: number) => {
-      const Component = getComponent(content.packageType);
+const ItemRenderer: React.FC<{ item?: any }> = ({ item }) => {
+  const Component = getComponent(item.packageType);
 
-      return (
-        <div key={i}>
-          <Component data={content.items} title={content?.title} />
-        </div>
-      );
-    })}
-  </div>
-);
+  return (
+    <div key={item.id}>
+      <Component data={item.contents} title={item.title} />
+    </div>
+  );
+};
 
 export default TvShows;
