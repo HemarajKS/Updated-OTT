@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #5297ff;
+  --secondary-color: #ffffff;
+  --accent-color: #c8deff66;
+  --text-accent-color: #d6d9dd;
+  --text-color: #7a7b7b;
+  --scrollbar-color: #888888;
+  --popover-color: #292a2a;
+  --shadow-color: #000000fa;
+  --overlay-bg-color: #00000052;
+  --underline-color-light: #dad7cd00;
+  --underline-color-dark: #dad7cd33;
+  --selected-color: #1d78ff;
+  --subtitle-bg: #00000057;
+  --mobile-popover-bg: #080d14;
+  --info-color: #a3a3a3;
+  --error-bg: #080d14e5;
+
+  /* Gradients */
+  --popover-gradient-bg: linear-gradient(
+    0.03deg,
+    #080d14e6 30.04%,
+    rgba(8, 13, 20, 0.9) 135.03%
+  );
+}

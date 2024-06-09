@@ -1,0 +1,384 @@
+.custom-player-wrapper {
+  --mobile-subtitles-margin-bottom: unset;
+}
+
+.custom-controls-container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Open Sans";
+  width: 100%;
+  background-color: var(--color);
+}
+
+.custom-controls-container-mobile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.custom-controls-container-mobile-top-metadata {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.custom-controls__top-metadata__title-mobile {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.custom-controls__top-metadata__subtitle-mobile {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 8px;
+  color: var(--text-accent-color);
+}
+
+.custom-controls-container-mobile-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.custom-controls-mobile-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.custom-controls-mobile-bottom-seekbar-container {
+  display: flex;
+  gap: 8px;
+}
+
+.custom-controls__seek-bar-range-mobile {
+  position: relative;
+  width: 100%;
+}
+
+.custom-controls__seekbar-thumbnail-mobile {
+  position: absolute;
+  bottom: 20px;
+  left: 0%;
+  height: 90px;
+  width: 160px;
+  visibility: hidden;
+  transform: translateX(-50%);
+  font-size: 14px;
+  background-repeat: no-repeat;
+  color: var(--secondary-color);
+  border-radius: 12px;
+  margin-bottom: 32px;
+  outline: 2px solid var(--primary-color);
+  overflow: hidden;
+}
+
+.custom-controls__seekbar-thumbnail-time-mobile {
+  color: var(--secondary-color);
+  bottom: -26px;
+  position: absolute;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.custom-controls__time-duration-mobile {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-wrap: nowrap;
+}
+
+.custom-controls__range-input-mobile {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 5px;
+  background: var(--accent-color);
+}
+
+.custom-controls__range-input-mobile::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.custom-controls__range-input-mobile::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.custom-controls-mobile-bottom-buttons-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.custom-controls__buttons-with-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.custom-controls__buttons-text {
+  font-size: 14px;
+}
+
+.custom-controls__buttons-group-end-mobile {
+  display: flex;
+  gap: 24px;
+}
+
+.custom-controls__settings-popover-mobile {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  padding: 0 24px 32px;
+  background: var(--popover-gradient-bg);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-controls__settings-popover-close-icon {
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.custom-controls__settings-popover-title-tabs-mobile {
+  display: flex;
+  margin-bottom: 24px;
+  position: relative;
+  position: sticky;
+  top: 0;
+  padding-top: 32px;
+  z-index: 1;
+  gap: 24px;
+}
+
+.custom-controls__settings-popover-title-mobile {
+  font-size: 24px !important;
+  padding: 0 8px 24px !important;
+}
+
+.custom-controls__caption-popover-mobile {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  padding: 0 24px 32px;
+  background: var(--popover-gradient-bg);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-controls__caption-popover-title-tabs-mobile {
+  display: flex;
+  margin-bottom: 24px;
+  position: relative;
+  position: sticky;
+  top: 0;
+  padding-top: 32px;
+  z-index: 1;
+  gap: 24px;
+}
+
+.custom-controls__caption-popover-close-icon {
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.custom-controls__popover-popover-title-mobile {
+  font-size: 24px !important;
+  padding: 0 8px 24px !important;
+}
+
+.custom-controls__settings-popover-content-playback-speed-mobile {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 22px;
+}
+
+.custom-controls__playback-speed-popover-option {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.custom-controls__settings-popover-content-playback-speed-mobile
+  .custom-controls__playback-speed-popover-option-selected {
+  outline: 2px solid var(--selected-color) !important;
+  box-shadow: 0px 0px 0px 10px var(--mobile-popover-bg) !important;
+  outline-offset: 10px !important;
+}
+
+.custom-controls__settings-popover-content-playback-speed-mobile:before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid var(--accent-color);
+  height: 100%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.custom-controls__playback-speed-popover-option-label-mobile {
+  position: absolute;
+  bottom: -36px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: nowrap;
+  font-size: 14px;
+}
+
+video::-webkit-media-text-track-container {
+  transform: translateY(var(--mobile-subtitles-margin-bottom)) !important;
+  transition: transform 0.5s ease;
+}
+
+video::cue {
+  display: block !important;
+  margin: 0 auto;
+  font-family: "Open Sans" !important;
+  width: max-content !important;
+  max-width: 80vw;
+  padding: 0 8px !important;
+  background: var(--subtitle-bg) !important;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 492px) {
+  .custom-controls__settings-popover-title-mobile {
+    font-size: 16px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .custom-controls__popover-popover-title-mobile {
+    font-size: 16px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .custom-controls__settings-popover-mobile {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .custom-controls__settings-popover-title-tabs-mobile {
+    gap: 16px;
+  }
+
+  .custom-controls__caption-popover-title-tabs-mobile {
+    gap: 16px;
+  }
+
+  .custom-controls__caption-popover-close-icon {
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+
+    top: 16px;
+  }
+
+  .custom-controls-container-mobile-top-metadata {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .custom-controls-container-mobile-middle {
+    gap: 40px;
+  }
+
+  .custom-controls__settings-popover-title-mobile {
+    font-size: 14px !important;
+  }
+
+  .custom-controls__popover-popover-title-mobile {
+    font-size: 14px !important;
+  }
+
+  .custom-controls__settings-popover-title-tabs-mobile {
+    gap: 8px;
+  }
+
+  .custom-controls__settings-popover-option {
+    font-size: 12px !important;
+  }
+
+  .custom-controls__caption-popover-option {
+    font-size: 12px !important;
+  }
+
+  .custom-controls__playback-speed-popover-option-label {
+    font-size: 12px !important;
+  }
+}
+/* Remove this if hiding texts not needed for portrait */
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .custom-controls-container__top-metadata-mobile {
+    display: none;
+  }
+
+  .custom-controls__buttons-text {
+    display: none;
+  }
+
+  .custom-controls__buttons-group-end-mobile {
+    gap: 12px;
+  }
+
+  .custom-controls-mobile-bottom-seekbar-container {
+    flex-direction: column-reverse;
+  }
+
+  .custom-controls__time-duration-mobile {
+    text-align: end;
+  }
+
+  .custom-controls-container-mobile {
+    padding: 0 12px;
+  }
+
+  .custom-controls__seekbar-thumbnail-mobile {
+    border-radius: 6px;
+  }
+}

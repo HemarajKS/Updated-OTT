@@ -1,0 +1,154 @@
+.icon {
+  background-size: 50px 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  content: '';
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+
+.icon-mobile {
+  background-size: 32px 32px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  content: '';
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+
+.icon-mobile-center {
+  background-size: 56px 56px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  content: '';
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* preload icons */
+.preload-icons {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  content: url('../icons/arrow-back.svg') url('../icons/captions.svg')
+    url('../icons/forward.svg') url('../icons/rewind.svg')
+    url('../icons/fullscreen-exit.svg') url('../icons/fullscreen.svg')
+    url('../icons/pause.svg') url('../icons/play.svg')
+    url('../icons/replay.svg');
+}
+
+.back-icon {
+  background-image: url('../icons/arrow-back.svg');
+}
+
+.caption-icon {
+  background-image: url('../icons/captions.svg');
+}
+
+.forward-icon {
+  background-image: url('../icons/forward.svg');
+}
+
+.rewind-icon {
+  background-image: url('../icons/rewind.svg');
+}
+
+.fullscreen-exit-icon {
+  background-image: url('../icons/fullscreen-exit.svg');
+}
+
+.fullscreen-icon {
+  background-image: url('../icons/fullscreen.svg');
+}
+
+.pause-icon {
+  background-image: url('../icons/pause.svg');
+}
+
+.play-icon {
+  background-image: url('../icons/play.svg');
+}
+
+.replay-icon {
+  background-image: url('../icons/replay.svg');
+}
+
+.volume-max-icon {
+  background-image: url('../icons/volume.svg');
+}
+
+.volume-min-icon {
+  background-image: url('../icons/volume.svg');
+}
+
+.volume-mute-icon {
+  background-image: url('../icons/volume.svg');
+}
+
+.close-icon {
+  background-image: url('../icons/close.svg');
+}
+
+.retry-icon {
+  background-image: url('../icons/retry.svg');
+}
+
+.tick-icon::before {
+  background-image: url('../icons/tick.svg');
+  display: inline-flex !important;
+  background-size: 15px 15px;
+  height: 15px;
+  width: 15px;
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.error-icon::before {
+  background-image: url('../icons/error.svg');
+  display: inline-flex !important;
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.settings-icon {
+  background-image: url('../icons/setting.svg');
+}
+
+@media screen and (max-width: 576px) {
+  .icon {
+    background-size: 32px 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .tick-icon::before {
+    background-size: 14px 14px;
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .icon-mobile-center {
+    background-size: 40px 56px !important;
+  }
+}
