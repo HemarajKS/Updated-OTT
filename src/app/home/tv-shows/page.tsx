@@ -16,12 +16,16 @@ const TvShows = () => {
     limit: number
   ): Promise<{ responseData: any[]; totalPages: number }> => {
     try {
-      const response = await request(`${URL?.GET_ALL_TV_SHOWS}`, constants.GET);
+      const response = await request(
+        `${URL?.GET_ALL_TV_SHOWS}&skip=${skip}&limit=${limit}`,
+        constants.GET
+      );
 
       return {
         responseData: response?.data[0]?.packages,
         totalPages: Math.ceil(
-          response?.pagination?.totalItems / constants.API_DATA_LIMIT - 1
+          response?.data[0]?.pagination.totalItems / constants.API_DATA_LIMIT -
+            1
         ),
       };
     } catch (error) {

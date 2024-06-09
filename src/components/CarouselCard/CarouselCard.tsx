@@ -11,8 +11,6 @@ const CarouselCard = ({ actualData }: any) => {
 
   const src = jawSummary?.poster || "";
 
-  console.log(jawSummary);
-
   return (
     <Link
       href={
