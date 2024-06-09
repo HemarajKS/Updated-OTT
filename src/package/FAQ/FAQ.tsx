@@ -6,11 +6,11 @@ import React, { FC } from "react";
 const FAQ: React.FC<FAQProps> = ({ data, title }) => {
   return (
     <div className=" flex flex-col gap-[20px] p-[40px] relative">
-      {/* <div className="text-center">
+      <div className="text-center">
         <Title title={title} />
       </div>
 
-      <Accordion contents={data.contents} /> */}
+      <Accordion contents={data} />
     </div>
   );
 };

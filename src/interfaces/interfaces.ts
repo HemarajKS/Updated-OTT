@@ -61,18 +61,14 @@ export interface HeroDataProps {
   image: Image;
 }
 
-export interface Content {
+export interface FAQDataProps {
   id: string;
   accordionTitle: string;
   accordionDescription: string;
 }
 
-export interface FAQDataProps {
-  contents: Content[];
-}
-
 export interface FAQProps {
-  data: FAQDataProps;
+  data: FAQDataProps[];
   title: string;
 }
 
