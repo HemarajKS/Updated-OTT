@@ -1,7 +1,7 @@
 import { RailsProps } from "@/interfaces/interfaces";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,7 +16,11 @@ const Banner = ({ data }: RailsProps) => {
         slidesPerView={1}
         effect={"fade"}
         navigation
-        modules={[Navigation, Pagination, EffectFade]}
+        modules={[Navigation, Pagination, EffectFade, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="h-full"
       >
         {data?.map((item, i) => {
