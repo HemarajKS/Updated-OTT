@@ -11,10 +11,16 @@ const CarouselCard = ({ actualData }: any) => {
 
   const src = jawSummary?.poster || "";
 
+  console.log(jawSummary);
+
   return (
     <Link
-      // href={`/${jawSummary.target.path}`}
-      href={"/"}
+      href={
+        {
+          Movie: `/movies/${jawSummary.id}`,
+          TVSeries: `/tv-shows/${jawSummary.id}`,
+        }[jawSummary.type] || "/"
+      }
       className={` bg-dark-blue backdrop-filter backdrop-blur-md bg-cover bg-center border border-white border-opacity-25 rounded-lg p-6 shadow-lg flex flex-col items-center justify-center text-center  transition-all
        ${isHovered && "scale-110 max-h-[450px]"}
       `}
