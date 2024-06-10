@@ -21,6 +21,9 @@ const Banner = ({ data }: RailsProps) => {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        pagination={{
+          dynamicBullets: true,
+        }}
         className="h-full"
       >
         {data?.map((item, i) => {
