@@ -6,7 +6,7 @@ import { RailsProps } from "@/interfaces/interfaces";
 
 const Rails = ({ data, title }: RailsProps) => {
   return (
-    <div className=" flex flex-col gap-[20px] carousel-custom  relative p-[40px]">
+    <div className=" flex flex-col gap-[20px] carousel-custom  relative py-[40px] px-[20px]">
       <Title title={title || strings.movies} />
       <CarouselItems movieData={data} />
     </div>

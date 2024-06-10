@@ -25,19 +25,22 @@
   .error-text {
     @apply text-cinnabar text-xs leading-normal pt-[6px];
   }
+
+  .custom-swiper-styles .swiper-button-next {
+    margin-right: 20px;
+  }
+  .custom-swiper-styles .swiper-button-prev {
+    margin-left: 20px;
+  }
+
+  .custom-swiper-styles .swiper-button-disabled {
+    visibility: hidden;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .carousel-custom > div > .react-multi-carousel-track {
-    @apply !absolute !top-0;
-  }
-
-  .carousel-custom > .react-multi-carousel-list {
-    @apply !h-[283px] !relative !overflow-y-visible !overflow-x-clip;
   }
 }
 
