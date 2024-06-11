@@ -21,7 +21,7 @@ const Movies = () => {
       );
 
       return {
-        responseData: response?.data[0]?.packages,
+        responseData: response?.data[0]?.curation?.packages,
         totalPages: Math.ceil(
           response?.data[0]?.pagination.totalItems / constants.API_DATA_LIMIT -
             1

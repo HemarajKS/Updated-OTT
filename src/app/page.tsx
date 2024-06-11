@@ -20,7 +20,7 @@ const Home = () => {
     try {
       const data = await request(URL?.GET_Home_Data, constants.GET);
 
-      setHomeData(data?.data && data?.data[0]?.packages);
+      setHomeData(data?.data && data?.data[0]?.curation?.packages);
     } catch (error: any) {
       logger.logError(
         "Menu",
