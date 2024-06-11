@@ -41,7 +41,7 @@ const CarouselCard = ({ actualData }: any) => {
           />
         </div>
 
-        <div className="text-white uppercase text-md font-semibold mt-4 line-clamp-2 text-ellipsis">
+        <div className="text-white uppercase text-md mt-2 line-clamp-2 text-ellipsis">
           {jawSummary.name}
         </div>
       </div>
