@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const CarouselCard = ({ actualData }: any) => {
   const jawSummary = actualData;
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   const [error, setError] = useState(false);
 
@@ -19,16 +19,12 @@ const CarouselCard = ({ actualData }: any) => {
           TVSeries: `/tv-shows/${jawSummary.id}`,
         }[jawSummary.type as keyof { Movie: string; TVSeries: string }] || "/"
       }
-      className={` bg-dark-blue backdrop-filter backdrop-blur-md bg-cover bg-center border border-white border-opacity-25 rounded-lg p-6 shadow-lg flex flex-col items-center justify-center text-center  transition-all
-       ${isHovered && "scale-110 max-h-[450px]"}
-      `}
+      className={`backdrop-filter z-0 backdrop-blur-md bg-cover bg-center rounded-lg shadow-lg flex flex-col items-center justify-center text-center  transition-all `}
     >
-      <div
-        className="w-full relative overflow-visible "
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className="banner-image overflow-hidden rounded-lg border border-white border-opacity-25">
+      <div className="w-full relative overflow-visible ">
+        <div
+          className={`banner-image overflow-hidden rounded-lg border border-white border-opacity-25 z-30 `}
+        >
           <Image
             src={
               error
@@ -40,20 +36,14 @@ const CarouselCard = ({ actualData }: any) => {
             width={500}
             height={300}
             onError={() => setError(true)}
-            className="h-[210px] object-cover"
+            className="h-[210px] object-cover z-0 relative"
             unoptimized
           />
         </div>
-        {isHovered && (
-          <div className="transition-opacity duration-300 ">
-            <h1 className="text-white uppercase text-3xl font-semibold mt-4 line-clamp-2">
-              {jawSummary.name}
-            </h1>
-            <p className="text-white text-base mt-4 line-clamp-2">
-              {jawSummary.description}
-            </p>
-          </div>
-        )}
+
+        <div className="text-white uppercase text-md font-semibold mt-4 line-clamp-2 text-ellipsis">
+          {jawSummary.name}
+        </div>
       </div>
     </Link>
   );

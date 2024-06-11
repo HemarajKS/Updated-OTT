@@ -36,7 +36,7 @@ const CarouselItems = ({ movieData }: CarouselItemsProps) => {
         navigation={true}
         modules={[Navigation]}
         breakpoints={responsive}
-        className="w-full h-[283px] !overflow-y-visible !overflow-x-clip !px-[20px] custom-swiper-styles"
+        className="w-full !overflow-y-visible !overflow-x-clip !px-[20px] custom-swiper-styles !z-0"
       >
         {movieData &&
           movieData.length > 0 &&
@@ -44,7 +44,9 @@ const CarouselItems = ({ movieData }: CarouselItemsProps) => {
             return (
               <SwiperSlide
                 key={i}
-                className={`${i !== movieData.length - 1 && "mr-[20px]"}`}
+                className={`${
+                  i !== movieData.length - 1 && "mr-[20px]"
+                } absolute`}
               >
                 <CarouselCard key={curElem?.id} actualData={curElem} />
               </SwiperSlide>
